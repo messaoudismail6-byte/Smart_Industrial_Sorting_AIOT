@@ -1,0 +1,119 @@
+[
+  {
+    "id":"tab-main",
+    "type":"tab",
+    "label":"Smart Sorting Cell",
+    "disabled":false
+  },
+  {
+    "id":"mqtt-in",
+    "type":"mqtt in",
+    "z":"tab-main",
+    "name":"ESP32 Telemetry",
+    "topic":"factory/cell01/telemetry",
+    "qos":"0",
+    "datatype":"auto",
+    "broker":"mqtt-broker",
+    "x":150,
+    "y":100,
+    "wires":[["json-parse","debug"]]
+  },
+  {
+    "id":"json-parse",
+    "type":"json",
+    "z":"tab-main",
+    "name":"Parse telemetry",
+    "property":"payload",
+    "action":"",
+    "pretty":false,
+    "x":380,
+    "y":100,
+    "wires":[["prepare-ai","dashboard"]]
+  },
+  {
+    "id":"prepare-ai",
+    "type":"function",
+    "z":"tab-main",
+    "name":"Build AI request",
+    "func":"msg.headers={'content-type':'application/json'}; msg.payload={vibration_rms:Number(msg.payload.vibration_rms||0),temperature_c:Number(msg.payload.temperature_c||50),current_a:Number(msg.payload.current_a||5),cycle_time_s:Number(msg.payload.cycle_time_s||7)}; return msg;",
+    "outputs":1,
+    "x":620,
+    "y":80,
+    "wires":[["ai-http"]]
+  },
+  {
+    "id":"ai-http",
+    "type":"http request",
+    "z":"tab-main",
+    "name":"Edge AI",
+    "method":"POST",
+    "ret":"obj",
+    "url":"http://ai:8000/predict",
+    "x":850,
+    "y":80,
+    "wires":[["ai-result"]]
+  },
+  {
+    "id":"ai-result",
+    "type":"function",
+    "z":"tab-main",
+    "name":"AI result",
+    "func":"msg.topic='factory/cell01/ai'; return msg;",
+    "outputs":1,
+    "x":1060,
+    "y":80,
+    "wires":[["mqtt-ai","debug"]]
+  },
+  {
+    "id":"mqtt-ai",
+    "type":"mqtt out",
+    "z":"tab-main",
+    "name":"AI MQTT",
+    "topic":"factory/cell01/ai",
+    "qos":"0",
+    "retain":"false",
+    "broker":"mqtt-broker",
+    "x":1240,
+    "y":80,
+    "wires":[]
+  },
+  {
+    "id":"debug",
+    "type":"debug",
+    "z":"tab-main",
+    "name":"Diagnostics",
+    "active":true,
+    "tosidebar":true,
+    "console":false,
+    "tostatus":false,
+    "complete":"payload",
+    "targetType":"msg",
+    "x":1070,
+    "y":180,
+    "wires":[]
+  },
+  {
+    "id":"dashboard",
+    "type":"function",
+    "z":"tab-main",
+    "name":"Dashboard data",
+    "func":"msg.topic='dashboard'; return msg;",
+    "outputs":1,
+    "x":620,
+    "y":150,
+    "wires":[["debug"]]
+  },
+  {
+    "id":"mqtt-broker",
+    "type":"mqtt-broker",
+    "name":"Local MQTT",
+    "broker":"mosquitto",
+    "port":"1883",
+    "clientid":"",
+    "autoConnect":true,
+    "usetls":false,
+    "protocolVersion":"4",
+    "keepalive":"60",
+    "cleansession":true
+  }
+]

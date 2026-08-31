@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#0b1220"/>
+<rect x="45" y="45" width="1510" height="810" rx="28" fill="#101b2e" stroke="#324661" stroke-width="3"/>
+<text x="90" y="115" fill="#ffffff" font-family="Arial" font-size="40" font-weight="700">TIA Portal — PLC Engineering Architecture</text>
+<text x="90" y="155" fill="#9fb0c8" font-family="Arial" font-size="22">S7-1200 program organization for the smart sorting cell</text>
+
+<g font-family="Arial" text-anchor="middle">
+<rect x="120" y="230" width="260" height="150" rx="18" fill="#182942" stroke="#73a7ff" stroke-width="3"/>
+<text x="250" y="285" fill="white" font-size="27">OB1_Main</text>
+<text x="250" y="325" fill="#a9c7ff" font-size="19">Main cyclic program</text>
+<rect x="500" y="190" width="260" height="120" rx="18" fill="#182942" stroke="#73a7ff" stroke-width="3"/>
+<text x="630" y="240" fill="white" font-size="23">FB20_Conveyor</text>
+<text x="630" y="275" fill="#a9c7ff" font-size="17">VFD / speed</text>
+<rect x="500" y="340" width="260" height="120" rx="18" fill="#182942" stroke="#73a7ff" stroke-width="3"/>
+<text x="630" y="390" fill="white" font-size="23">FB30_Weighing</text>
+<text x="630" y="425" fill="#a9c7ff" font-size="17">Weight validation</text>
+<rect x="500" y="490" width="260" height="120" rx="18" fill="#182942" stroke="#73a7ff" stroke-width="3"/>
+<text x="630" y="540" fill="white" font-size="23">FB50_Robot</text>
+<text x="630" y="575" fill="#a9c7ff" font-size="17">Handshake</text>
+<rect x="900" y="190" width="300" height="120" rx="18" fill="#182942" stroke="#b78cff" stroke-width="3"/>
+<text x="1050" y="240" fill="white" font-size="23">DB100_CellControl</text>
+<text x="1050" y="275" fill="#d8c4ff" font-size="17">Process / states</text>
+<rect x="900" y="340" width="300" height="120" rx="18" fill="#182942" stroke="#b78cff" stroke-width="3"/>
+<text x="1050" y="390" fill="white" font-size="23">DB200_AI</text>
+<text x="1050" y="425" fill="#d8c4ff" font-size="17">Health / anomaly / RUL</text>
+<rect x="900" y="490" width="300" height="120" rx="18" fill="#182942" stroke="#b78cff" stroke-width="3"/>
+<text x="1050" y="540" fill="white" font-size="23">DB300_Recipes</text>
+<text x="1050" y="575" fill="#d8c4ff" font-size="17">Weight limits / speed</text>
+<path d="M380 305 H500 M760 250 H900 M760 400 H900 M760 550 H900" stroke="#7daaff" stroke-width="5"/>
+</g>
+<text x="90" y="820" fill="#8d9bb0" font-family="Arial" font-size="20">MESSAOUDI SMAIL • Smart Industrial AI Sorting Cell</text>
+</svg>

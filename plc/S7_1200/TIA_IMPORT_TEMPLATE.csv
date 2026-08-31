@@ -1,0 +1,15 @@
+Name,DataType,Address,Comment
+ProductPresent,BOOL,%I0.0,Factory I/O product sensor
+StartPB,BOOL,%I0.1,Start pushbutton
+StopPB,BOOL,%I0.2,Stop pushbutton
+ResetPB,BOOL,%I0.3,Reset
+EStop_OK,BOOL,%I0.4,Emergency chain status
+ConveyorRun,BOOL,%Q0.0,Conveyor command
+RobotPickRequest,BOOL,%Q0.1,Robot pick command
+RobotBinA,BOOL,%Q0.2,Target A
+RobotBinB,BOOL,%Q0.3,Target B
+RobotBinC,BOOL,%Q0.4,Target C
+RejectRequest,BOOL,%Q0.5,Reject target
+Weight_kg,REAL,DB100.DBD0,Measured weight
+HealthScore,REAL,DB200.DBD0,AI health score
+RiskLevel,INT,DB200.DBW4,AI risk level

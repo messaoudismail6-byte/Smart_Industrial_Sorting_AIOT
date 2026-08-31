@@ -1,0 +1,22 @@
+name: Portfolio Python Validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r ai/requirements.txt
+      - run: python ai/train_model.py
+      - run: python -m py_compile ai/*.py robot/*.py analytics/*.py
+
+      - name: OEE smoke test
+        run: python analytics/oee.py

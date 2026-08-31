@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+<rect width="1400" height="800" fill="#0b1220"/>
+<text x="70" y="80" fill="white" font-family="Arial" font-size="38" font-weight="700">Industry 4.0 System Architecture</text>
+
+<g font-family="Arial" font-size="24" text-anchor="middle">
+<rect x="70" y="180" width="220" height="120" rx="18" fill="#17263d" stroke="#6ea8fe"/><text x="180" y="235" fill="white">S7-1200 PLC</text><text x="180" y="270" fill="#9fc5ff">Control</text>
+<rect x="380" y="180" width="220" height="120" rx="18" fill="#17263d" stroke="#6ea8fe"/><text x="490" y="235" fill="white">WinCC HMI</text><text x="490" y="270" fill="#9fc5ff">Operator</text>
+<rect x="690" y="180" width="220" height="120" rx="18" fill="#17263d" stroke="#6ea8fe"/><text x="800" y="235" fill="white">Robot Arm</text><text x="800" y="270" fill="#9fc5ff">Pick / Place</text>
+<rect x="1000" y="180" width="280" height="120" rx="18" fill="#17263d" stroke="#6ea8fe"/><text x="1140" y="235" fill="white">Factory I/O</text><text x="1140" y="270" fill="#9fc5ff">Digital Twin</text>
+<rect x="240" y="430" width="240" height="120" rx="18" fill="#17263d" stroke="#b78cff"/><text x="360" y="485" fill="white">ESP32</text><text x="360" y="520" fill="#d5bdff">Sensors / Weight</text>
+<rect x="580" y="430" width="240" height="120" rx="18" fill="#17263d" stroke="#b78cff"/><text x="700" y="485" fill="white">Node-RED + MQTT</text><text x="700" y="520" fill="#d5bdff">IIoT</text>
+<rect x="920" y="430" width="240" height="120" rx="18" fill="#17263d" stroke="#b78cff"/><text x="1040" y="485" fill="white">Edge AI</text><text x="1040" y="520" fill="#d5bdff">Anomaly + RUL</text>
+<path d="M290 240 H380 M600 240 H690 M910 240 H1000 M360 430 V300 M480 490 H580 M820 490 H920" stroke="#7aa7ff" stroke-width="5" fill="none"/>
+</g>
+
+<text x="70" y="750" fill="#9aa8bd" font-family="Arial" font-size="22">MESSAOUDI SMAIL — Smart Industrial AI Sorting Cell</text>
+</svg>

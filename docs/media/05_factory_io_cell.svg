@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#0b1220"/>
+<rect x="45" y="45" width="1510" height="810" rx="28" fill="#101b2e" stroke="#324661" stroke-width="3"/>
+<text x="90" y="115" fill="#ffffff" font-family="Arial" font-size="40" font-weight="700">Factory I/O — Digital Twin Sorting Cell</text>
+<text x="90" y="155" fill="#9fb0c8" font-family="Arial" font-size="22">Simulation concept: detect → weigh → classify → robot pick → bin</text>
+
+<g font-family="Arial">
+<rect x="120" y="260" width="1300" height="110" rx="18" fill="#1a2940" stroke="#71839e" stroke-width="3"/>
+<text x="170" y="325" fill="#c4d2e5" font-size="22">INFEED</text>
+<rect x="290" y="285" width="170" height="55" rx="10" fill="#243b5d"/><text x="375" y="320" fill="white" font-size="20" text-anchor="middle">CONVEYOR</text>
+<rect x="500" y="275" width="180" height="75" rx="12" fill="#293d57"/><text x="590" y="320" fill="white" font-size="21" text-anchor="middle">WEIGH STATION</text>
+<rect x="720" y="285" width="150" height="55" rx="10" fill="#243b5d"/><text x="795" y="320" fill="white" font-size="20" text-anchor="middle">ROBOT</text>
+<rect x="960" y="205" width="150" height="120" rx="14" fill="#21334d"/><text x="1035" y="255" fill="white" font-size="22" text-anchor="middle">BIN A</text><text x="1035" y="290" fill="#9fb0c8" font-size="17" text-anchor="middle">&lt; 1 kg</text>
+<rect x="1140" y="205" width="150" height="120" rx="14" fill="#21334d"/><text x="1215" y="255" fill="white" font-size="22" text-anchor="middle">BIN B</text><text x="1215" y="290" fill="#9fb0c8" font-size="17" text-anchor="middle">1–3 kg</text>
+<rect x="960" y="390" width="150" height="120" rx="14" fill="#21334d"/><text x="1035" y="440" fill="white" font-size="22" text-anchor="middle">BIN C</text><text x="1035" y="475" fill="#9fb0c8" font-size="17" text-anchor="middle">3–5 kg</text>
+<rect x="1140" y="390" width="150" height="120" rx="14" fill="#382a2a"/><text x="1215" y="440" fill="white" font-size="22" text-anchor="middle">REJECT</text><text x="1215" y="475" fill="#e4b5b5" font-size="17" text-anchor="middle">&gt; 5 kg</text>
+<path d="M870 312 H960 M870 312 L960 265 M870 312 L960 450 M870 312 L1140 450" stroke="#7daaff" stroke-width="4" fill="none"/>
+<circle cx="400" cy="315" r="15" fill="#a8c7ff"/>
+<text x="180" y="570" fill="#9fb0c8" font-size="22">Digital Twin Test Scenarios</text>
+<text x="180" y="615" fill="white" font-size="20">• Overweight product  • Robot not ready  • Sensor timeout  • Vibration fault  • Conveyor overload</text>
+</g>
+<text x="90" y="820" fill="#8d9bb0" font-family="Arial" font-size="20">MESSAOUDI SMAIL • Smart Industrial AI Sorting Cell</text>
+</svg>

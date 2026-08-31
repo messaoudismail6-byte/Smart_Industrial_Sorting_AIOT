@@ -1,0 +1,11 @@
+FactoryIO_Tag,Direction,PLC_Tag,Description
+Conveyor_Start,PLC->FactoryIO,ConveyorRun,Conveyor motor
+Sensor_Product,FactoryIO->PLC,ProductPresent,Product presence
+Robot_Pick,PLC->Robot,RobotPickRequest,Pick command
+Target_A,PLC->Robot,RobotBinA,Weight class A
+Target_B,PLC->Robot,RobotBinB,Weight class B
+Target_C,PLC->Robot,RobotBinC,Weight class C
+Reject,PLC->Robot,RejectRequest,Reject destination
+Robot_Ready,Robot->PLC,RobotReady,Robot ready
+Robot_Pick_Complete,Robot->PLC,RobotAtPick,Pick complete
+Robot_Place_Complete,Robot->PLC,RobotAtBin,Place complete

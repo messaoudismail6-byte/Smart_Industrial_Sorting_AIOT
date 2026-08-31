@@ -1,0 +1,61 @@
+(*
+  Portfolio SCL template for a sorting-cell sequence.
+  Adapt tags and safety interlocks to the actual TIA Portal project.
+*)
+
+CASE State OF
+
+    0: // IDLE
+        ConveyorRun := FALSE;
+        RobotPickRequest := FALSE;
+
+        IF StartPB AND EStop_OK THEN
+            State := 10;
+        END_IF;
+
+    10: // FEED
+        ConveyorRun := TRUE;
+
+        IF ProductPresent THEN
+            ConveyorRun := FALSE;
+            State := 20;
+        END_IF;
+
+    20: // WEIGH
+        IF WeighingDone THEN
+            IF Weight_kg < Limit_A_kg THEN
+                WeightClass := 1;
+            ELSIF Weight_kg < Limit_B_kg THEN
+                WeightClass := 2;
+            ELSIF Weight_kg <= Limit_C_kg THEN
+                WeightClass := 3;
+            ELSE
+                WeightClass := 4;
+            END_IF;
+            State := 30;
+        END_IF;
+
+    30: // ROBOT REQUEST
+        IF RobotReady AND EStop_OK THEN
+            RobotPickRequest := TRUE;
+            State := 40;
+        END_IF;
+
+    40: // WAIT ROBOT
+        IF NOT RobotPickRequest THEN
+            State := 50;
+        END_IF;
+
+    50: // COMPLETE
+        CycleComplete := TRUE;
+        State := 10;
+
+    900: // FAULT
+        ConveyorRun := FALSE;
+        RobotPickRequest := FALSE;
+
+END_CASE;
+
+IF NOT EStop_OK OR StopPB THEN
+    State := 900;
+END_IF;

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#0b1220"/>
+<rect x="45" y="45" width="1510" height="810" rx="28" fill="#101b2e" stroke="#324661" stroke-width="3"/>
+<text x="90" y="115" fill="#ffffff" font-family="Arial" font-size="40" font-weight="700">WinCC HMI — Predictive Maintenance Screen</text>
+<text x="90" y="155" fill="#9fb0c8" font-family="Arial" font-size="22">Operator-oriented view of production and equipment health</text>
+
+<g font-family="Arial">
+<rect x="100" y="205" width="1380" height="520" rx="20" fill="#0d1727" stroke="#4b607b" stroke-width="3"/>
+<rect x="130" y="245" width="250" height="110" rx="14" fill="#182942"/><text x="155" y="285" fill="#91a4bd" font-size="18">HEALTH SCORE</text><text x="155" y="330" fill="white" font-size="42">94%</text>
+<rect x="405" y="245" width="250" height="110" rx="14" fill="#182942"/><text x="430" y="285" fill="#91a4bd" font-size="18">RISK</text><text x="430" y="330" fill="white" font-size="42">NORMAL</text>
+<rect x="680" y="245" width="250" height="110" rx="14" fill="#182942"/><text x="705" y="285" fill="#91a4bd" font-size="18">ANOMALY</text><text x="705" y="330" fill="white" font-size="42">0.08</text>
+<rect x="955" y="245" width="250" height="110" rx="14" fill="#182942"/><text x="980" y="285" fill="#91a4bd" font-size="18">RUL PROXY</text><text x="980" y="330" fill="white" font-size="42">218 h</text>
+<rect x="1230" y="245" width="210" height="110" rx="14" fill="#182942"/><text x="1255" y="285" fill="#91a4bd" font-size="18">OEE</text><text x="1255" y="330" fill="white" font-size="42">86%</text>
+<rect x="130" y="390" width="760" height="270" rx="14" fill="#111f33"/>
+<text x="160" y="430" fill="#91a4bd" font-size="20">MOTOR CONDITION TREND</text>
+<path d="M165 600 C270 570 310 590 400 525 S560 560 650 470 S760 500 850 435" stroke="#9fbfff" stroke-width="5" fill="none"/>
+<path d="M165 610 H850 M165 610 V455" stroke="#526783" stroke-width="2"/>
+<rect x="920" y="390" width="520" height="270" rx="14" fill="#111f33"/>
+<text x="950" y="430" fill="#91a4bd" font-size="20">AI RECOMMENDATION</text>
+<text x="950" y="485" fill="white" font-size="22">Continue monitoring</text>
+<text x="950" y="535" fill="#b9c8dc" font-size="19">Vibration within baseline.</text>
+<text x="950" y="570" fill="#b9c8dc" font-size="19">No anomaly detected.</text>
+</g>
+<text x="90" y="820" fill="#8d9bb0" font-family="Arial" font-size="20">MESSAOUDI SMAIL • Smart Industrial AI Sorting Cell</text>
+</svg>

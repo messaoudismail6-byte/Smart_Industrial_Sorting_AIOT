@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Industrial Sorting Cell</title>
+<style>
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#0b1220;color:#eaf0f7}
+header{padding:22px 30px;background:#111b2e;border-bottom:1px solid #26344d}
+h1{margin:0;font-size:25px}.sub{opacity:.65;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;padding:24px}
+.card{background:#121e32;border:1px solid #26344d;border-radius:14px;padding:20px;box-shadow:0 8px 25px #0003}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:1px;opacity:.6}
+.value{font-size:32px;font-weight:700;margin-top:8px}
+.status{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:99px;background:#20334d}
+footer{padding:20px 30px;opacity:.55}
+</style>
+</head>
+<body>
+<header>
+<h1>Smart Industrial Sorting Cell</h1>
+<div class="sub">S7-1200 · ESP32 · Edge AI · Node-RED · Robot · Factory I/O</div>
+</header>
+<section class="grid">
+<div class="card"><div class="label">Machine</div><div class="value" id="machine">RUNNING</div><span class="status">AUTO</span></div>
+<div class="card"><div class="label">Current Weight</div><div class="value" id="weight">0.00 kg</div></div>
+<div class="card"><div class="label">Health Score</div><div class="value" id="health">98%</div><span class="status">NORMAL</span></div>
+<div class="card"><div class="label">Robot</div><div class="value">READY</div></div>
+<div class="card"><div class="label">Production</div><div class="value" id="count">0</div></div>
+<div class="card"><div class="label">Rejects</div><div class="value" id="reject">0</div></div>
+</section>
+<footer>Portfolio reference implementation — MESSAOUDI ISMAIL</footer>
+<script>
+let count=0;
+setInterval(()=>{
+  const w=(Math.random()*5.5).toFixed(2);
+  document.getElementById('weight').textContent=w+' kg';
+  document.getElementById('health').textContent=(95+Math.random()*5).toFixed(0)+'%';
+  if(Math.random()>.65){count++;document.getElementById('count').textContent=count;}
+},1500);
+</script>
+</body>
+</html>
